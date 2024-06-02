@@ -5,4 +5,12 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   base: "https://juan-tech.com/",
   plugins: [react()],
+  build: {
+    // generate .vite/manifest.json in outDir
+    manifest: true,
+    rollupOptions: {
+      // overwrite default .html entry
+      input: "./server/main.js",
+    },
+  },
 });
