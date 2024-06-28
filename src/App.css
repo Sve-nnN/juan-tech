@@ -1,42 +1,87 @@
+/*
+//<uniquifier>: Use a unique and descriptive class name
+//<weight>: Use a value from 100 to 900
+.inter-<uniquifier > {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}*/
 #root {
-  max-width: 1280px;
+  --amarillo: #facc15;
+  --verde: #7ae582;
+  --blanco: #f1faff;
+  --azul-primary: #00a6fb;
+  --azul-secondary: #00a7fb10;
+  --font-size-h1: 72px;
+  --font-size-h2: 60px;
+  --font-size-text-md: 16px;
+  --font-size-text-sm: 14px;
+}
+body {
+  position: relative;
+  font-size: var(--font-size-text-md);
+  background: rgb(5, 25, 35);
+  background: linear-gradient(
+    180deg,
+    rgba(5, 25, 35, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  min-height: 100vh;
+}
+h1 {
+  font-size: var(--font-size-h1);
+  color: var(--blanco);
+}
+h2 {
+  font-size: var(--font-size-h2);
+  color: var(--blanco);
+}
+.flex {
+  display: flex;
+}
+.spaceAround {
+  justify-content: space-around;
+}
+.spaceBetween {
+  justify-content: space-between;
+  gap: 24px;
+}
+.navbar {
+  max-width: 960px;
+  min-width: 920px;
+  position: sticky;
+  top: 0;
+}
+
+.amarillo {
+  color: var(--amarillo);
+}
+.verde {
+  color: var(--verde);
+}
+p {
+  color: var(--blanco);
+}
+a {
+  color: var(--blanco);
+  font-weight: bold;
+}
+.divider {
+  width: 115px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  background-color: black;
+  height: 4px;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.degradado {
+  background: rgb(165, 129, 255);
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(165, 129, 255, 1) 0%,
+    rgba(165, 19, 255, 1) 50%,
+    rgba(37, 166, 232, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
