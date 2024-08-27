@@ -1,9 +1,10 @@
-import Button from "../button";
+import Button from "@/components/button";
+import HeadShot from "@/assets/headshot.webp";
 export default function Hero() {
   return (
     <section className="Hero flex column gap">
       <div className="workStatus flex gap itemsCenter ">
-        <img className="headshot" src="/src/assets/headshot.webp" />
+        <img className="headshot" src={HeadShot} />
         <p className="label">¡Disponible para trabajar!</p>
       </div>
       <h1>

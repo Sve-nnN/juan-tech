@@ -1,13 +1,15 @@
+import Logo from "@/assets/logo.webp";
+import LightMode from "@/assets/lightMode.svg";
 export default function Navbar() {
   return (
     <div className="flex spaceAround navbar">
-      <img src="/src/assets/logo.webp" />
+      <img className="logo" src={Logo} />
       <div className="flex spaceBetween">
         <a>Acerca de mi</a>
         <a>Blog</a>
         <a>Certificados</a>
       </div>
-      <img src="/src/assets/lightMode.svg" />
+      <img src={LightMode} />
     </div>
   );
 }

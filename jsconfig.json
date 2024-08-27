@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      //usamos rutas relativas para el import de imagenes
+      "@/*": ["src/*"]
+    }
+  }
+}
