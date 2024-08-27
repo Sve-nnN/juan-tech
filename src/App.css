@@ -1,14 +1,16 @@
 /*
-//<uniquifier>: Use a unique and descriptive class name
-//<weight>: Use a value from 100 to 900
-.inter-<uniquifier > {
-  font-family: "Inter", sans-serif;
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.inter-tight-<uniquifier > {
+  font-family: "Inter Tight", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
-  font-variation-settings: "slnt" 0;
 }*/
 #root {
+  font-family: "Inter Tight", sans-serif;
+
   --amarillo: #facc15;
   --verde: #7ae582;
   --blanco: #f1faff;
@@ -20,6 +22,7 @@
   --font-size-text-sm: 14px;
 }
 body {
+  color: var(--blanco);
   position: relative;
   font-size: var(--font-size-text-md);
   background: rgb(5, 25, 35);
@@ -31,6 +34,8 @@ body {
   min-height: 100vh;
 }
 h1 {
+  line-height: 90px;
+  font-weight: bold;
   font-size: var(--font-size-h1);
   color: var(--blanco);
 }
@@ -38,8 +43,24 @@ h2 {
   font-size: var(--font-size-h2);
   color: var(--blanco);
 }
+
+.headshot {
+  width: 80px;
+  height: auto;
+  aspect-ratio: 1/1;
+}
 .flex {
   display: flex;
+}
+.column {
+  flex-direction: column;
+}
+section {
+  max-width: 870px;
+  margin: 115px auto;
+}
+.gap {
+  gap: 24px;
 }
 .spaceAround {
   justify-content: space-around;
@@ -51,10 +72,51 @@ h2 {
 .navbar {
   max-width: 960px;
   min-width: 920px;
+  padding: 30px 0;
   position: sticky;
   top: 0;
+  margin: 0 auto;
 }
-
+.workStatus > p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  /*
+  border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%) 1;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50px;*/
+  background: linear-gradient(#00111a, #00111a) padding-box,
+    linear-gradient(
+        to right,
+        rgba(165, 129, 255, 1) 0%,
+        rgba(37, 166, 232, 1) 100%,
+        rgba(165, 19, 255, 1) 50%
+      )
+      border-box;
+  padding: 8px 12px;
+  border-radius: 20em;
+  border: 2px solid transparent;
+}
+.buttonsContainer {
+  display: flex;
+  gap: 14px;
+}
+.button {
+  border-radius: 8px;
+  border: 0;
+  font-size: 16px;
+  padding: 12px 24px;
+}
+.itemsCenter {
+  align-items: center;
+}
+.justifyCenter {
+  justify-content: center;
+}
+.bio {
+  font-weight: 500;
+}
 .amarillo {
   color: var(--amarillo);
 }
@@ -71,17 +133,20 @@ a {
 .divider {
   width: 115px;
   margin: 0 auto;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   height: 4px;
+  border-radius: 20px;
 }
 .degradado {
   background: rgb(165, 129, 255);
+
+  -webkit-text-fill-color: transparent;
   background: -webkit-linear-gradient(
     0deg,
     rgba(165, 129, 255, 1) 0%,
     rgba(165, 19, 255, 1) 50%,
     rgba(37, 166, 232, 1) 100%
   );
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
