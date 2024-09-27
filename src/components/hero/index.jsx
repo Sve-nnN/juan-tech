@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="Hero flex column gap">
       <div className="workStatus flex gap itemsCenter ">
         <img className="headshot" src={HeadShot} />
-        <p className="label">¡Disponible para trabajar!</p>
+        <p className="label">¡Trabajando actualmente!</p>
       </div>
       <h1>
         <span className="degradado">Desarrollador Web</span> con 3 años de
